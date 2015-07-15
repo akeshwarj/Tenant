@@ -21,6 +21,7 @@ public class App {
 		
 		try {
 			service.rentAFloor(34000, building[0], tenant[1]);
+			service.vacateAFloor(building[0], tenant[1], 0);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
