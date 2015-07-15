@@ -10,7 +10,7 @@ public class RentalService {
 			System.out.println(floorsRented);
 
 			for (int i=0; i<floorsRented;) {				//scan from the bottom and fill the available floors.
-				if (building.tenantName[i] == "0") {
+				if (building.tenantName[i].equals("0")) {
 					building.tenantName[i] = tenant.name;
 					i++;
 				}
@@ -27,7 +27,7 @@ public class RentalService {
 		 * if any floor in that building is occupied by that tenant
 		 * mark it as available
 		 */
-		if (building.tenantName[floor] == tenant.name) {
+		if (building.tenantName[floor].equals(tenant.name)) {
 			building.tenantName[floor] = "0";
 		}
 		building.floorsAvailable--;
